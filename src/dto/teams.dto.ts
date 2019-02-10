@@ -1,4 +1,4 @@
-import { IsString, IsInt } from "class-validator";
+import { IsString, IsInt } from 'class-validator';
 import { Team } from '../models/teams.model';
 
 export class TeamDto implements Team {

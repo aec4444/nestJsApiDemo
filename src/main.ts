@@ -7,9 +7,9 @@ async function bootstrap() {
   const server = express();
   const auth = new AuthenticationMiddleware().resolve();
   server.post('/teams', auth);
-  server.get('/teams', auth);
+  // server.get('/teams', auth);
 
-  const app = await NestFactory.create(AppModule, server);
+  const app = await NestFactory.create(AppModule, server, { cors: true });
   await app.listen(3000);
 }
 bootstrap();
